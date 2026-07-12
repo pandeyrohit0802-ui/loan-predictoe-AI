@@ -59,7 +59,7 @@ model.fit(X, y)
 
 # --- 3. WEBSITE USER INTERFACE ---
 st.title("🏦 Smart Bank Loan Predictor")
-st.markdown("### *Apni details bharein aur AI se approval check karein*")
+st.markdown("### Fill in your details and let AI check your approval status.*")
 
 col1, col2 = st.columns(2)
 
@@ -87,7 +87,7 @@ if st.button("🚀 Check Loan Status"):
     result = model.predict(user_data)
     
     if result == 1:
-        st.success("✅ Badhai ho! Loan Approve hone ke chances hain.")
+        st.success("✅ Congratulations! There is a good chance that your loan will be approved.")
         st.balloons()
     else:
-        st.error("⚠️ Maafi chahenge, Loan Reject hone ka risk hai.")
+        st.error("⚠️ We're sorry, but there is a risk that your loan may be rejected.")
